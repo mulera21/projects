@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- Your header content -->
+        <h1>Welcome to Your Website</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'all_products' %}">All Products</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+        <p>&copy; {{ year }} Your Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
