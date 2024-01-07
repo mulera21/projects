@@ -1,15 +1,16 @@
 from django.shortcuts import render
+from store.models import Products
 from store .models import Category, Products, Order,Customer
 
 
-# all products
-def product_list(request):
+#  products
+def all_products(request):
     products = Products.objects.all()
     return render(request, 'store/product.html', {'products': products})
 
 #product by category
 def products_by_category(request, category_id):
-    products = Products.get_all_products_by_categoryid(category_id)
+    products = Products.objects.filter(category=category_id)
     return render(request, 'products.html', {'products': products})
 
 #order placing
