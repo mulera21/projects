@@ -36,7 +36,7 @@ class Customer(models.Model):
         if Customer.objects.filter(email=self.email):
             return True
 
-        return False
+        return False        
 
 # PRODUCT MODEL
 class  Products(models.Model):
