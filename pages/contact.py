@@ -14,7 +14,7 @@ with st.form(key="my form"):
 Subject:new email from{user_email}
 
 From: {user_email}
-{topic}
+Topic : {topic}
 {row_message} 
 """
     button = st.form_submit_button("submit")
